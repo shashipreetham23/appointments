@@ -17,7 +17,7 @@ class Appointments extends Component {
 
   toggleIsStarred = id => {
     this.setState(prevState => ({
-      appointmentList: prevState.appointmentsList.map(each => {
+      appointmentsList: prevState.appointmentsList.map(each => {
         if (id === each.id) {
           return {...each, isStarred: !each.isStarred}
         }
@@ -47,7 +47,7 @@ class Appointments extends Component {
     }
 
     this.setState(prevState => ({
-      appointmentsList: [...prevState.appointmentList, newAppointment],
+      appointmentsList: [...prevState.appointmentsList, newAppointment],
       titleInput: '',
       dateInput: '',
     }))
